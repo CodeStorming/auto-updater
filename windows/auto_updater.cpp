@@ -54,7 +54,7 @@ AutoUpdater::AutoUpdater() {
 AutoUpdater::~AutoUpdater() {}
 
 void AutoUpdater::SetFeedURL(std::string authToken, std::string feedURL) {
-  win_sparkle_set_http_header('Authorization'.c_str(), authToken.c_str());
+  win_sparkle_set_http_header("Authorization".c_str(), authToken.c_str());
   win_sparkle_set_appcast_url(feedURL.c_str());
   win_sparkle_init();
 
