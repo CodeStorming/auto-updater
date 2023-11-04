@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _handleClickSetFeedURL() async {
-    await autoUpdater.setFeedURL(_feedURL);
+    //await autoUpdater.setFeedURL(_feedURL);
     _isFeedURLSetted = true;
   }
 

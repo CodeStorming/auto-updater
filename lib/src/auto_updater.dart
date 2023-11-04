@@ -24,8 +24,9 @@ class AutoUpdater {
   }
 
   /// Sets the url and initialize the auto updater.
-  Future<void> setFeedURL(String feedUrl) async {
+  Future<void> setFeedURL(String authToken,String feedUrl) async {
     final Map<String, dynamic> arguments = {
+      'authToken': authToken,
       'feedURL': feedUrl,
     };
     await _channel.invokeMethod('setFeedURL', arguments);
