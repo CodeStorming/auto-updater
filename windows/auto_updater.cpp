@@ -23,7 +23,7 @@ class AutoUpdater {
 
     virtual ~AutoUpdater();
 
-    void AutoUpdater::SetFeedURL(std::string feedURL);
+    void AutoUpdater::SetFeedURL(std::string authToken, std::string feedURL);
     void AutoUpdater::CheckForUpdates();
     void AutoUpdater::CheckForUpdatesWithoutUI();
     void AutoUpdater::SetScheduledCheckInterval(int interval);
