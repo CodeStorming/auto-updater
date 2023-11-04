@@ -73,7 +73,9 @@ void AutoUpdaterPlugin::HandleMethodCall(
         std::get<flutter::EncodableMap>(*method_call.arguments());
     std::string feedURL =
         std::get<std::string>(args.at(flutter::EncodableValue("feedURL")));
-    auto_updater.SetFeedURL(feedURL);
+    std::string authToken =
+        std::get<std::string>(args.at(flutter::EncodableValue("authToken")));
+    auto_updater.SetFeedURL(authToken, feedURL);
     auto_updater.RegisterCallbacks(std::move(_channel));
     result->Success(flutter::EncodableValue(true));
 
